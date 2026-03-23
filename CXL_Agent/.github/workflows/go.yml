@@ -1,0 +1,29 @@
+# This workflow runs format and build checks on the projects golang code
+
+name: Golang CI
+
+on: [push]
+
+jobs:
+  go-format-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Golang
+        uses: actions/setup-go@v4
+        with:
+          go-version: "1.23.7"
+
+      - name: Generate support files
+        run: make generate
+
+      - name: Format Golang
+        run: if [ "$(gofmt -l . | wc -l)" -gt 0 ]; then exit 1; fi
+
+      - name: Build cfm-service & cfm-cli (Golang)
+        run: make build-go
+
+      - name: Build cxl-host (Golang)
+        working-directory: ./cmd/cxl-host
+        run: make local

@@ -1,0 +1,23 @@
+app:
+  name: 'DCMFM'
+  type: 'Manager'
+  version: '2026.03'
+
+dcmfm:
+  agent_ip: '192.168.0.11'
+  agent_port: ':4000'
+  monitor_ip: '192.168.0.10'
+  monitor_port: ':4100'
+  manager_ip: '192.168.0.1'
+  manager_port: ':4200'
+
+logger:
+  log_level: 'debug'
+
+policy:
+  alloc: 'sequential'
+  free: 'monitor'
+
+cxl-agent:
+  agent_ip: '192.168.0.1'
+  agent_port: ':8080'

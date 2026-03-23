@@ -1,0 +1,43 @@
+{
+    "appliance-data": {
+        "Discovered_Switches": {
+            "credentials": {
+                "username": "admin",
+                "password": "1234",
+                "ipAddress": "127.0.0.1",
+                "port": 8443,
+                "insecure": true,
+                "protocol": "http",
+                "customId": "Discovered_Switches"
+            },
+            "blade-data": {
+                "H3P-Switch": {
+                    "credentials": {
+                        "username": "admin",
+                        "password": "1234",
+                        "ipAddress": "192.168.0.101",
+                        "port": 80,
+                        "protocol": "http",
+                        "backend": "ap1_b2_fa",
+                        "customId": "H3P-Switch"
+                    },
+                    "connection-status": "online"
+                },
+                "Xconn-Switch": {
+                    "credentials": {
+                        "username": "admin",
+                        "password": "1234",
+                        "ipAddress": "192.168.0.102",
+                        "port": 8080,
+                        "protocol": "http",
+                        "backend": "ap1_b2_titan2",
+                        "customId": "Xconn-Switch"
+                    },
+                    "connection-status": "online"
+                }
+            },
+            "connection-status": "n\\a"
+        }
+    },
+    "host-data": {}
+}

@@ -1,0 +1,10 @@
+apiVersion: v2
+appVersion: unstable
+description: |
+  The CXL NRI plugin enables pooled CXL memory for k8s Pods to use.
+name: nri-cxl
+sources:
+ - https://github.com/SamsungDS/Pangaea/CXL_NRI_Plugin
+home: https://github.com/SamsungDS/Pangaea/CXL_NRI_Plugin
+type: application
+version: v0.0.0

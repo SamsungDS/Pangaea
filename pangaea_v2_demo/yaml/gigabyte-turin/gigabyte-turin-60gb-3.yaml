@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gigabyte-turin-60gb-3
+  annotations:
+    memory-type.cxl.nri.io/pod: cxl
+spec:
+  nodeName: gigabyte-turin
+  restartPolicy: OnFailure
+  containers:
+  - name: python-60gb-alloc
+    image: python:3.5
+    command: ["python", "-c"]
+    args:
+      - |
+        import time
+ 
+        time.sleep(2)
+      
+        allocated_memory = []
+
+        for i in range(440):
+          allocated_memory.append(bytearray(128*1024*1024))
+          time.sleep(0.25)
+
+        print('Python app allocated 55GB of memory')
+
+        time.sleep(300)
+    resources:
+      requests:
+        memory: "60Gi"
+      limits:
+        memory: "60Gi"

@@ -1,0 +1,31 @@
+{
+        "host-data": {
+                "Turin-server-1": {
+                        "Host-IP": "192.168.0.11",
+                        "Fabric-Name" : "Discovered_Switches",
+                        "Switch-Name" : "H3P-Switch",
+                        "Linked-Usp-Number" : "9",
+                        "Cxl-Serial-Number" : "0x0900000000000000",
+                        "Switch-IP" : "192.168.0.101",
+                        "Switch-Port" : "80"
+                },
+                "Turin-server-2": {
+                        "Host-IP": "192.168.0.12",
+                        "Fabric-Name" : "Discovered_Switches",
+                        "Switch-Name" : "H3P-Switch",
+                        "Linked-Usp-Number" : "10",
+                        "Cxl-Serial-Number" : "0x0700000000000000",
+                        "Switch-IP" : "192.168.0.101",
+                        "Switch-Port" : "80"
+                },
+                 "GNR-server-1": {
+                        "Host-IP": "192.168.0.13",
+                        "Fabric-Name" : "Discovered_Switches",
+                        "Switch-Name" : "Xconn-Switch",
+                        "Linked-Usp-Number" : "3",
+                        "Cxl-Serial-Number" : "0x0800000000000000",
+                        "Switch-IP" : "192.168.0.102",
+                        "Switch-Port" : "8080"
+                }
+        }
+}
